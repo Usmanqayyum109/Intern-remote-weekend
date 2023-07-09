@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Objects</title>
+</head>
+<body>
+
+    <h3>Object</h3>
+    <p id="obj"></p>
+
+    <h2>This Keyword</h2>
+    <p id="this"></p>
+
+    <h2>Adding</h2>
+    <p id="adding"> </p>
+
+    <h2>Upper Case</h2>
+    <p id="upperCase"></p>
+    <script>
+        // Object 
+
+        const student = {
+            name: "musa",
+            age:21,
+            gender:"male"
+
+    }
+
+    document.getElementById("obj"). innerHTML =   "Name is " +student.name + ". "+"age is " + student.age + ". " +"Gender is " +student.gender;
+
+    // this
+
+    const student1 = {
+            name: "musa",
+            age:21,
+            gender:"male",
+            nameAge: function() {
+                return this.name + " " + this.age;
+            }
+
+    };
+
+    document.getElementById("this"). innerHTML = student1.nameAge();
+
+    // Adding
+
+    const student2 = {
+            name: "musa",
+            age:21,
+            gender:"male",
+            
+
+    };
+
+    student2.nameAge =  function() {
+                return this.name + " " + this.age;
+            }
+
+    document.getElementById("adding"). innerHTML = student1.nameAge();
+
+    // UpperCase
+
+    const student3 = {
+            name: "musa",
+            age:21,
+            gender:"male",
+            
+
+    };
+
+    student2.nameAge =  function() {
+                return (this.name + " " + this.age).toUpperCase();
+            }
+
+    document.getElementById("upperCase"). innerHTML = student1.nameAge();
+    </script>
+</body>
+</html>

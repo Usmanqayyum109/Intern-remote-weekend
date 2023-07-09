@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array </title>
+ 
+       
+</head>
+<body>
+     <h3>Array</h3>
+    <div class="container">
+        <div>
+        <p id="demo"></p>
+    </div>
+        <!-- Length -->
+         <div>
+            <button class="button transitioned" onclick="ArrayLength()">Length</button>
+            <p id="length"></p>
+        </div>
+
+        <!-- Push -->
+         <div>
+            <button class="button transitioned" onclick="ArrayPush()">Push</button>
+            <p id="push"></p>
+        </div> 
+
+        <!-- Pop -->
+         <div>
+            <button class="button transitioned" onclick="ArrayPop()">Pop</button>
+            <p id="pop"></p>
+        </div> 
+
+        <!-- Shift -->
+         <div>
+            <button class="button transitioned" onclick="ArrayShift()">Shift</button>
+            <p id="shift"></p>
+        </div> 
+
+        <!-- UnShift -->
+         <div>
+            <button class="button transitioned" onclick="ArrayUnShift()">UnShift</button>
+            <p id="unshift"></p>
+        </div>
+    </div>  
+
+     
+    
+
+    <script>
+        var nameOfWeekend = ["Monday", "Tuesday", "Wednesday", "Thursday"];
+        // console.log(nameOfWeekend);
+        document.getElementById("demo").innerHTML = nameOfWeekend;
+
+        function ArrayLength() {
+            document.getElementById("length").innerHTML = nameOfWeekend.length;
+        }
+
+        // Push
+         function ArrayPush() {
+            nameOfWeekend.push("Friday");
+            document.getElementById("push").innerHTML = nameOfWeekend;
+        }
+
+        // pop
+        function ArrayPop() {
+            nameOfWeekend.pop();
+            document.getElementById("pop").innerHTML = nameOfWeekend;
+        }
+
+        // Shift
+        function ArrayShift() {
+            nameOfWeekend.shift();
+            document.getElementById("shift").innerHTML = nameOfWeekend;
+        }
+
+        // Unshift 
+        function ArrayUnShift() {
+            nameOfWeekend.unshift("Monday");
+            document.getElementById("unshift").innerHTML = nameOfWeekend;
+        }
+
+
+       
+
+
+        
+        
+    </script>
+</body>
+</html>
